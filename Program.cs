@@ -16,7 +16,7 @@ namespace salario
             decimal resultado = 0;
 
             Console.Write("Digite seu salario: ");
-            salario = Convert.ToDecimal(Console.ReadLine().Replace(".", ","));
+            salario = Convert.ToDecimal(Console.ReadLine().Replace(",", "."));
 
             if (salario <= 280)
             {
