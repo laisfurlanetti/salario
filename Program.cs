@@ -22,28 +22,28 @@ namespace salario
             {
                 num = 20;
                 porcentagem = (salario * num) / 100;
-                resultado = porcentagem + salario;
+                resultado = SalarioAtual(porcentagem, salario);
             }
 
             if (salario >= 280 && salario < 700)
             {
                 num = 15;
                 porcentagem = (salario * num) / 100;
-                resultado = porcentagem + salario;
+                resultado = SalarioAtual(porcentagem, salario);
             }
 
             if (salario >= 700 && salario < 1500)
             {
                 num = 10;
                 porcentagem = (salario * num) / 100;
-                resultado = porcentagem + salario;
+                resultado = SalarioAtual(porcentagem, salario);
             }
 
-            if (salario > 1500)
+            if (salario >= 1500)
             {
                 num = 5;
                 porcentagem = (salario * num) / 100;
-                resultado = porcentagem + salario;
+                resultado = SalarioAtual(porcentagem, salario);
             }
 
             Console.WriteLine("Seu salario era de: R$ " + salario);
@@ -53,6 +53,13 @@ namespace salario
 
             Console.ReadLine();
 
+        }
+        public static decimal SalarioAtual(decimal porcentagem, decimal salario)
+        {
+            decimal saldo;
+
+            saldo = porcentagem + salario;
+            return saldo;
         }
     }
 }
