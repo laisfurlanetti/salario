@@ -18,7 +18,7 @@ namespace salario
             Console.Write("Digite seu salario: ");
             salario = Convert.ToDecimal(Console.ReadLine().Replace(",", "."));
 
-            if (salario <= 280)
+            if (salario < 280)
             {
                 num = 20;
                 porcentagem = (salario * num) / 100;
